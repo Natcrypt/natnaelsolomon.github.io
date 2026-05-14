@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary:    #0a0b0f;
+  --bg-secondary:  #111218;
+  --bg-card:       #15161d;
+  --bg-hover:      #1c1d27;
+  --border:        #22242e;
+  --border-bright: #2e3044;
+  --text-primary:  #e8eaf0;
+  --text-secondary:#8b8fa8;
+  --text-muted:    #555870;
+  --accent:        #6c63ff;
+  --accent-dim:    #3d3880;
+  --green:         #00d4aa;
+  --green-dim:     #003d30;
+  --red:           #ff4d6a;
+  --red-dim:       #3d0016;
+  --amber:         #f5a623;
+  --amber-dim:     #3d2800;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+
+/* Card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+/* Price colors */
+.positive { color: var(--green); }
+.negative { color: var(--red); }
+.neutral  { color: var(--text-secondary); }
+
+/* Badge */
+.badge {
+  display: inline-flex; align-items: center;
+  padding: 2px 8px; border-radius: 4px;
+  font-size: 11px; font-weight: 500;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.badge-green  { background: var(--green-dim); color: var(--green); }
+.badge-red    { background: var(--red-dim);   color: var(--red); }
+.badge-accent { background: var(--accent-dim); color: var(--accent); }
+.badge-amber  { background: var(--amber-dim); color: var(--amber); }
